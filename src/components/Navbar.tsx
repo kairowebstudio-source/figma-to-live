@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Logo } from "@/components/Logo";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -37,9 +38,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-navy rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-serif font-bold text-lg">K</span>
-            </div>
+            <Logo variant="navy" />
             <span className="font-serif text-xl font-semibold text-navy">Kairoweb Studio</span>
           </Link>
 

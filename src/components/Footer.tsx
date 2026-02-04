@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Logo } from "@/components/Logo";
 
 export function Footer() {
   return (
@@ -7,9 +8,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-gold rounded-lg flex items-center justify-center">
-              <span className="text-white font-serif font-bold text-lg">K</span>
-            </div>
+            <Logo variant="gold" />
             <span className="font-serif text-xl font-semibold">Kairoweb Studio</span>
           </div>
 
