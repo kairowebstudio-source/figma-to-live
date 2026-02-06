@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export function HeroSection() {
   return (
@@ -10,22 +11,28 @@ export function HeroSection() {
       <div className="absolute bottom-20 right-[15%] w-24 h-24 border-2 border-gold/20 rounded-full animate-float" style={{ animationDelay: '4s' }} />
 
       <div className="section-container text-center relative z-10">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-navy mb-6 animate-fade-in leading-tight">
-          Websites that help local<br />businesses grow
-        </h1>
-        
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          We design clean, modern websites for clinics and businesses. First, we create a free design. You pay only if you like it.
-        </p>
+        <ScrollReveal>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-navy mb-6 leading-tight">
+            Websites that help local<br />businesses grow
+          </h1>
+        </ScrollReveal>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          <Button asChild size="lg" className="bg-gold hover:bg-gold-hover text-white rounded-full px-8 py-6 text-base">
-            <Link to="/contact">Get a Free Design</Link>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="rounded-full px-8 py-6 text-base border-navy text-navy hover:bg-navy hover:text-white">
-            <Link to="/services">View Services</Link>
-          </Button>
-        </div>
+        <ScrollReveal delay={150}>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
+            We design clean, modern websites for clinics and businesses. First, we create a free design. You pay only if you like it.
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal delay={300}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="bg-gold hover:bg-gold-hover text-white rounded-full px-8 py-6 text-base">
+              <Link to="/contact">Get a Free Design</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="rounded-full px-8 py-6 text-base border-navy text-navy hover:bg-navy hover:text-white">
+              <Link to="/services">View Services</Link>
+            </Button>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
