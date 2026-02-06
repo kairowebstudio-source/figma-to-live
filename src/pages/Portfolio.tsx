@@ -4,6 +4,13 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { ExternalLink, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import healthcareImg from "@/assets/portfolio/healthcare-clinic.jpg";
+import lawFirmImg from "@/assets/portfolio/law-firm.jpg";
+import groceryImg from "@/assets/portfolio/grocery-store.jpg";
+import beautySalonImg from "@/assets/portfolio/beauty-salon.jpg";
+import dentalImg from "@/assets/portfolio/dental-clinic.jpg";
+import techStartupImg from "@/assets/portfolio/tech-startup.jpg";
+
 const WHATSAPP_NUMBER = "916301452605";
 
 const projects = [
@@ -12,42 +19,42 @@ const projects = [
     category: "Clinic",
     description:
       "A modern, patient-focused clinic website with appointment booking and doctor profiles.",
-    color: "bg-blue-50",
+    image: healthcareImg,
   },
   {
     title: "Sharma & Associates Law",
     category: "Law Firm",
     description:
       "A professional law firm website conveying trust, authority, and legal expertise.",
-    color: "bg-amber-50",
+    image: lawFirmImg,
   },
   {
     title: "FreshMart Grocery",
     category: "Business",
     description:
       "A vibrant local grocery store website with product listings and WhatsApp ordering.",
-    color: "bg-green-50",
+    image: groceryImg,
   },
   {
     title: "Glow Beauty Studio",
     category: "Business",
     description:
       "An elegant salon website showcasing services, pricing, and online booking.",
-    color: "bg-pink-50",
+    image: beautySalonImg,
   },
   {
     title: "SmileDent Dental Care",
     category: "Clinic",
     description:
       "A clean dental clinic website with treatment information and patient testimonials.",
-    color: "bg-cyan-50",
+    image: dentalImg,
   },
   {
     title: "TechStart Solutions",
     category: "Business",
     description:
       "A sleek landing page for a tech startup with lead capture and feature showcase.",
-    color: "bg-violet-50",
+    image: techStartupImg,
   },
 ];
 
@@ -81,17 +88,16 @@ const Portfolio = () => {
             {projects.map((project, index) => (
               <ScrollReveal key={project.title} delay={index * 100}>
                 <div className="bg-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-border/50 h-full flex flex-col">
-                  {/* Preview placeholder */}
-                  <div
-                    className={`${project.color} h-48 flex items-center justify-center relative overflow-hidden`}
-                  >
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-white/80 rounded-xl shadow-sm flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300">
-                        <ExternalLink className="w-6 h-6 text-navy/60" />
-                      </div>
-                      <span className="text-xs font-medium text-navy/50">
-                        Preview
-                      </span>
+                  {/* Preview image */}
+                  <div className="h-48 overflow-hidden relative">
+                    <img
+                      src={project.image}
+                      alt={`${project.title} website preview`}
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/20 transition-colors duration-300 flex items-center justify-center">
+                      <ExternalLink className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
                     </div>
                   </div>
 
