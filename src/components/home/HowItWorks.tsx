@@ -1,27 +1,24 @@
-import { ClipboardList, Palette, Rocket } from "lucide-react";
+import { Palette, ThumbsUp, Rocket } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 const steps = [
   {
     number: 1,
-    icon: ClipboardList,
-    title: "Share Your Requirements",
-    description:
-      "Tell us about your business, goals, and the kind of website you need.",
+    icon: Palette,
+    title: "Free Figma Design",
+    description: "We create a custom design for your website in Figma, completely free.",
   },
   {
     number: 2,
-    icon: Palette,
-    title: "Free Design Preview",
-    description:
-      "We create a custom design for your website — completely free, no strings attached.",
+    icon: ThumbsUp,
+    title: "Review & Approve",
+    description: "You review the design and request changes. Pay only when you love it.",
   },
   {
     number: 3,
     icon: Rocket,
-    title: "Build & Launch",
-    description:
-      "After your approval, we build and launch your website with domain and hosting setup.",
+    title: "Website Goes Live",
+    description: "We build and launch your website with domain and hosting setup included.",
   },
 ];
 
@@ -30,32 +27,20 @@ export function HowItWorks() {
     <section id="how-it-works" className="py-20">
       <div className="section-container">
         <ScrollReveal>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold text-navy mb-4">
-              How It Works
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-              Three simple steps to get your professional website up and
-              running. Fast delivery guaranteed.
-            </p>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-navy text-center mb-16">
+            How It Works
+          </h2>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {/* Connector line on desktop */}
-          <div className="hidden md:block absolute top-16 left-[20%] right-[20%] h-0.5 bg-border" />
-
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <ScrollReveal key={step.title} delay={index * 150}>
-              <div className="text-center relative">
+              <div className="text-center">
                 <div className="flex justify-center mb-6">
-                  <div className="w-14 h-14 rounded-full bg-gold text-white flex items-center justify-center relative z-10 shadow-lg">
-                    <step.icon className="w-6 h-6" />
+                  <div className="step-number font-sans">
+                    {step.number}
                   </div>
                 </div>
-                <span className="text-xs font-semibold text-gold uppercase tracking-wider mb-2 block">
-                  Step {step.number}
-                </span>
                 <h3 className="text-xl font-serif font-semibold text-navy mb-3">
                   {step.title}
                 </h3>
