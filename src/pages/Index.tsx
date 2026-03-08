@@ -7,6 +7,8 @@ import { PricingSection } from "@/components/home/PricingSection";
 import { FAQSection } from "@/components/home/FAQSection";
 import { CTASection } from "@/components/home/CTASection";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+import { Boxes } from "@/components/ui/background-boxes";
+import { cn } from "@/lib/utils";
 
 const Index = () => {
   return (
