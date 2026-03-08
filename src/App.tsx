@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import DemoOne from "./pages/Demo";
 
 const queryClient = new QueryClient();
 
